@@ -400,7 +400,7 @@ int main(int argc, char* argv[]) {
 
     cvCvtColor(src, gray, CV_BGR2GRAY);
     cvAbsDiff(gray, graybg, diffImg);
-    cvThreshold(diffImg, bin, 50, 255, 0);
+    cvThreshold(diffImg, bin, 40, 255, 0);
 
     cvCopyImage(src, rendered);
     process(bin, rendered);
