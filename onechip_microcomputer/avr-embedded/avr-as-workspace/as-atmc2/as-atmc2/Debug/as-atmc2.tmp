@@ -1,0 +1,39 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\Debug/as-atmc2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>as-atmc2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>as-atmc2.map</FILE>
+  <FILE>as-atmc2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>69</LINE></main>
+  <setup><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>11</LINE></setup>
+  <loop><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>21</LINE></loop>
+  <update_old_val><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>26</LINE></update_old_val>
+  <check_old_val><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>30</LINE></check_old_val>
+  <change_portb><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>52</LINE></change_portb>
+  <update_old_val2><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>35</LINE></update_old_val2>
+  <state_change><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>39</LINE></state_change>
+  <set_state><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>45</LINE></set_state>
+  <update_old_val3><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>49</LINE></update_old_val3>
+  <turn_off><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>57</LINE></turn_off>
+  <turn_on><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>62</LINE></turn_on>
+  <end_of_loop><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>66</LINE></end_of_loop>
+  <while_1><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-atmc2\as-atmc2\as-atmc2.asm</FILE><LINE>71</LINE></while_1>
+ </LABELS>
+</ASSEMBLER_INFO>

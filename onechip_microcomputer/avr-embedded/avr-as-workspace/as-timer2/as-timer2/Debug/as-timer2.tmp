@@ -1,0 +1,32 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\as-timer2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\Debug/as-timer2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>as-timer2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>as-timer2.map</FILE>
+  <FILE>as-timer2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\as-timer2.asm</FILE><LINE>47</LINE></main>
+  <timer0_ovf_func><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\as-timer2.asm</FILE><LINE>12</LINE></timer0_ovf_func>
+  <blink_led><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\as-timer2.asm</FILE><LINE>15</LINE></blink_led>
+  <setup><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\as-timer2.asm</FILE><LINE>28</LINE></setup>
+  <loop><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\as-timer2.asm</FILE><LINE>42</LINE></loop>
+  <end_of_loop><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\as-timer2.asm</FILE><LINE>44</LINE></end_of_loop>
+  <while_1><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-timer2\as-timer2\as-timer2.asm</FILE><LINE>50</LINE></while_1>
+ </LABELS>
+</ASSEMBLER_INFO>

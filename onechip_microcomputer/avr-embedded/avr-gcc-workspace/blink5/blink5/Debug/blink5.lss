@@ -1,0 +1,147 @@
+
+blink5.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000c2  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000030  00000000  00000000  00000116  2**0
+                  CONTENTS, READONLY
+  2 .debug_aranges 00000030  00000000  00000000  00000146  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   0000019a  00000000  00000000  00000176  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 00000122  00000000  00000000  00000310  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   000000e8  00000000  00000000  00000432  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000044  00000000  00000000  0000051c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    00000158  00000000  00000000  00000560  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    0000009e  00000000  00000000  000006b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 00000020  00000000  00000000  00000756  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  34:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	0e 94 50 00 	call	0xa0	; 0xa0 <main>
+  78:	0c 94 5f 00 	jmp	0xbe	; 0xbe <_exit>
+
+0000007c <__bad_interrupt>:
+  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000080 <myDelay>:
+	);
+}
+
+void myDelay(int ms){
+	int i = 0;
+	for(i = 0; i < ms; i++){
+  80:	18 16       	cp	r1, r24
+  82:	19 06       	cpc	r1, r25
+  84:	64 f4       	brge	.+24     	; 0x9e <myDelay+0x1e>
+  86:	20 e0       	ldi	r18, 0x00	; 0
+  88:	30 e0       	ldi	r19, 0x00	; 0
+
+// 4 stepの実行を__count回繰り返す。
+// 16MHzなので、約__count = 4000回で1ms実行される。
+void delay1msWithAsm(uint16_t __count)
+{
+	__asm__ volatile (
+  8a:	40 ea       	ldi	r20, 0xA0	; 160
+  8c:	5f e0       	ldi	r21, 0x0F	; 15
+  8e:	fa 01       	movw	r30, r20
+  90:	31 97       	sbiw	r30, 0x01	; 1
+  92:	f1 f7       	brne	.-4      	; 0x90 <myDelay+0x10>
+	);
+}
+
+void myDelay(int ms){
+	int i = 0;
+	for(i = 0; i < ms; i++){
+  94:	2f 5f       	subi	r18, 0xFF	; 255
+  96:	3f 4f       	sbci	r19, 0xFF	; 255
+  98:	28 17       	cp	r18, r24
+  9a:	39 07       	cpc	r19, r25
+  9c:	c1 f7       	brne	.-16     	; 0x8e <myDelay+0xe>
+  9e:	08 95       	ret
+
+000000a0 <main>:
+}
+
+int main(int argc, char* argv[])
+{
+	unsigned char on, off;
+	DDRB = 0b11110000;
+  a0:	80 ef       	ldi	r24, 0xF0	; 240
+  a2:	84 b9       	out	0x04, r24	; 4
+	on = 0b11101111;
+	off = 0b11001111;
+
+	while(1) {
+		PORTB = on;
+  a4:	df ee       	ldi	r29, 0xEF	; 239
+		myDelay(500);
+		PORTB = off;
+  a6:	cf ec       	ldi	r28, 0xCF	; 207
+	DDRB = 0b11110000;
+	on = 0b11101111;
+	off = 0b11001111;
+
+	while(1) {
+		PORTB = on;
+  a8:	d5 b9       	out	0x05, r29	; 5
+		myDelay(500);
+  aa:	84 ef       	ldi	r24, 0xF4	; 244
+  ac:	91 e0       	ldi	r25, 0x01	; 1
+  ae:	0e 94 40 00 	call	0x80	; 0x80 <myDelay>
+		PORTB = off;
+  b2:	c5 b9       	out	0x05, r28	; 5
+		myDelay(100);
+  b4:	84 e6       	ldi	r24, 0x64	; 100
+  b6:	90 e0       	ldi	r25, 0x00	; 0
+  b8:	0e 94 40 00 	call	0x80	; 0x80 <myDelay>
+  bc:	f5 cf       	rjmp	.-22     	; 0xa8 <main+0x8>
+
+000000be <_exit>:
+  be:	f8 94       	cli
+
+000000c0 <__stop_program>:
+  c0:	ff cf       	rjmp	.-2      	; 0xc0 <__stop_program>

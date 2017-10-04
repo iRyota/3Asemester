@@ -1,0 +1,31 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-adc2\as-adc2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-adc2\as-adc2\as-adc2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-adc2\as-adc2\Debug/as-adc2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>as-adc2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>as-adc2.map</FILE>
+  <FILE>as-adc2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-adc2\as-adc2\as-adc2.asm</FILE><LINE>40</LINE></main>
+  <adc_conversion_complete_func><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-adc2\as-adc2\as-adc2.asm</FILE><LINE>13</LINE></adc_conversion_complete_func>
+  <setup><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-adc2\as-adc2\as-adc2.asm</FILE><LINE>20</LINE></setup>
+  <loop><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-adc2\as-adc2\as-adc2.asm</FILE><LINE>35</LINE></loop>
+  <end_of_loop><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-adc2\as-adc2\as-adc2.asm</FILE><LINE>37</LINE></end_of_loop>
+  <while_1><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-adc2\as-adc2\as-adc2.asm</FILE><LINE>43</LINE></while_1>
+ </LABELS>
+</ASSEMBLER_INFO>

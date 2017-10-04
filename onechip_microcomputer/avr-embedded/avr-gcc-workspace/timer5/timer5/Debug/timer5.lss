@@ -1,0 +1,111 @@
+
+timer5.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000a6  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000030  00000000  00000000  000000fa  2**0
+                  CONTENTS, READONLY
+  2 .debug_aranges 00000030  00000000  00000000  0000012a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   00000105  00000000  00000000  0000015a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 000000bc  00000000  00000000  0000025f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   000000d2  00000000  00000000  0000031b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000044  00000000  00000000  000003f0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    00000149  00000000  00000000  00000434  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    0000004c  00000000  00000000  0000057d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 00000020  00000000  00000000  000005c9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  34:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	0e 94 4c 00 	call	0x98	; 0x98 <main>
+  78:	0c 94 51 00 	jmp	0xa2	; 0xa2 <_exit>
+
+0000007c <__bad_interrupt>:
+  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000080 <initialize_timer>:
+}
+
+void initialize_timer()
+{
+	//タイマーの設定
+	TCCR2A = _BV(COM2A1) | _BV(COM2A0) |_BV(WGM21) | _BV(WGM20);
+  80:	83 ec       	ldi	r24, 0xC3	; 195
+  82:	80 93 b0 00 	sts	0x00B0, r24
+	OCR2A = 250;//OC2Aの出力状態を変える際の条件となるレジスタの設定
+  86:	8a ef       	ldi	r24, 0xFA	; 250
+  88:	80 93 b3 00 	sts	0x00B3, r24
+	TCCR2B = _BV(CS21); //8分周比
+  8c:	82 e0       	ldi	r24, 0x02	; 2
+  8e:	80 93 b1 00 	sts	0x00B1, r24
+	TCNT2 = 0;//カウンタ値の初期化
+  92:	10 92 b2 00 	sts	0x00B2, r1
+  96:	08 95       	ret
+
+00000098 <main>:
+
+#include <avr/io.h>
+
+void setup_io()
+{
+	DDRB = _BV(DDB3);
+  98:	88 e0       	ldi	r24, 0x08	; 8
+  9a:	84 b9       	out	0x04, r24	; 4
+
+int main(int argc, char* argv[])
+{
+	
+	setup_io();
+	initialize_timer();
+  9c:	0e 94 40 00 	call	0x80	; 0x80 <initialize_timer>
+  a0:	ff cf       	rjmp	.-2      	; 0xa0 <main+0x8>
+
+000000a2 <_exit>:
+  a2:	f8 94       	cli
+
+000000a4 <__stop_program>:
+  a4:	ff cf       	rjmp	.-2      	; 0xa4 <__stop_program>

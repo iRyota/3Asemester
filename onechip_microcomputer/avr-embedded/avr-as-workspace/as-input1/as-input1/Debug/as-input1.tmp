@@ -1,0 +1,37 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\Debug/as-input1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>as-input1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>as-input1.map</FILE>
+  <FILE>as-input1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>59</LINE></main>
+  <setup><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>11</LINE></setup>
+  <loop><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>19</LINE></loop>
+  <light_off_5><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>27</LINE></light_off_5>
+  <mode_4><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>29</LINE></mode_4>
+  <light_off_4><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>36</LINE></light_off_4>
+  <mode_3><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>38</LINE></mode_3>
+  <light_off_3><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>45</LINE></light_off_3>
+  <mode_2><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>47</LINE></mode_2>
+  <light_off_2><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>54</LINE></light_off_2>
+  <mode_1><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>56</LINE></mode_1>
+  <while_1><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-input1\as-input1\as-input1.asm</FILE><LINE>61</LINE></while_1>
+ </LABELS>
+</ASSEMBLER_INFO>

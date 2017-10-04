@@ -1,0 +1,33 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\as-blink2.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR Assembler\Native\2.1.1175\avrassembler\Include\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\Debug/as-blink2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>as-blink2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>as-blink2.map</FILE>
+  <FILE>as-blink2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\as-blink2.asm</FILE><LINE>6</LINE></main>
+  <start><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\as-blink2.asm</FILE><LINE>11</LINE></start>
+  <mainloop1><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\as-blink2.asm</FILE><LINE>13</LINE></mainloop1>
+  <innerloop11><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\as-blink2.asm</FILE><LINE>15</LINE></innerloop11>
+  <innerloop12><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\as-blink2.asm</FILE><LINE>17</LINE></innerloop12>
+  <mainloop2><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\as-blink2.asm</FILE><LINE>27</LINE></mainloop2>
+  <innerloop21><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\as-blink2.asm</FILE><LINE>29</LINE></innerloop21>
+  <innerloop22><FILE>C:\Users\mech-user\Documents\Atmel Studio\6.2\as-blink2\as-blink2\as-blink2.asm</FILE><LINE>31</LINE></innerloop22>
+ </LABELS>
+</ASSEMBLER_INFO>
