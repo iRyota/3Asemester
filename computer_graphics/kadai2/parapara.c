@@ -146,7 +146,7 @@ void display(void)
   glTexCoord2f(1.0, 0.0); glVertex3f(3.0, -2.0, 0.0);
   glEnd();
   glFlush();
-  if(++frame == 10){
+  if(++frame == 200){
     if (++status == count) {
       status = 0;
     }
