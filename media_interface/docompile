@@ -1,0 +1,2 @@
+#/bin/sh
+gcc -I/usr/local/include/opencv -L/usr/local/lib -o $1 $1.c -lcvaux -lcv -lhighgui -lcxcore -lm -lpthread -lglut
