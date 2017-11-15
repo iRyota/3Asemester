@@ -23,6 +23,7 @@ for line in open("auto-mpg.txt", "r"):
 			error_flag = True
 	if error_flag:
 		continue
+	data.append(1)
 	label.append(data[0])
 	dataset.append(data[1:])
 label = np.array(label)
@@ -36,7 +37,7 @@ x = np.arange(np.min(dataset.T[0]), np.max(dataset.T[0]),(np.max(dataset.T[0])-n
 y = np.arange(np.min(dataset.T[1]), np.max(dataset.T[1]),(np.max(dataset.T[1])-np.min(dataset.T[1]))/15)
 X,Y = np.meshgrid(x,y)
 
-Z = omega[0]*X+omega[1]*Y
+Z = omega[0]*X+omega[1]*Y+omega[2]
 
 fig = plt.figure()
 ax = Axes3D(fig)
@@ -66,7 +67,17 @@ for line in open("auto-mpg.txt", "r"):
 label = np.array(label)
 dataset = np.array(dataset)
 
+
 dataset = PCA(dataset, 2)
+
+print(dataset)
+
+
+bias = np.zeros_like(dataset.T[0]) + 1
+bias = bias.reshape(len(bias),1)
+print(bias)
+
+dataset = np.hstack([dataset, bias])
 
 omega = np.linalg.inv(np.dot(dataset.T, dataset))
 omega = np.dot(omega, dataset.T)
@@ -76,7 +87,7 @@ x = np.arange(np.min(dataset.T[0]), np.max(dataset.T[0]),(np.max(dataset.T[0])-n
 y = np.arange(np.min(dataset.T[1]), np.max(dataset.T[1]),(np.max(dataset.T[1])-np.min(dataset.T[1]))/15)
 X,Y = np.meshgrid(x,y)
 
-Z = omega[0]*X+omega[1]*Y
+Z = omega[0]*X+omega[1]*Y+omega[2]
 
 fig = plt.figure()
 ax = Axes3D(fig)
